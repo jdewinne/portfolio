@@ -21,7 +21,7 @@ jobs:
     - name: yarn install
       uses: Borales/actions-yarn@v2.3.0
       env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       with:
         # Yarn command
         cmd: install
