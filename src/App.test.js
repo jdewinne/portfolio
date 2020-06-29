@@ -4,6 +4,6 @@ import App from './App';
 
 test('grid avatar', () => {
   const { getByText } = render(<App />);
-  const avatarElement = getByText(/Avatar/i);
+  const avatarElement = getByText(/Achievements/i);
   expect(avatarElement).toBeInTheDocument();
 });
