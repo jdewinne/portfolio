@@ -14,8 +14,10 @@ import Link from '@material-ui/core/Link';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
+import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 import 'fontsource-roboto';
 
@@ -50,6 +52,12 @@ function App() {
             </Link>
             <Link href="http://www.linkedin.com/in/jorisdewinne" color="inherit" className={classes.link}>
               <LinkedInIcon />
+            </Link>
+            <Link href="mailto:joris@dewinne.dev" color="inherit" className={classes.link}>
+              <EmailIcon />
+            </Link>
+            <Link href="tel:+16266899527" color="inherit" className={classes.link}>
+              <PhoneIcon />
             </Link>
           </Typography>
         </Toolbar>
