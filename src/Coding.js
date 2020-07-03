@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     card: {
         padding: theme.spacing(1),
     },
+    link: {
+        color: "inherit",
+    },
 }));
 
 function ListItemLink(props) {
@@ -86,7 +89,7 @@ function Coding() {
                                 <Table className={classes.table} size="small">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell colSpan={2}><Link href="https://www.hackerrank.com/joris_dewinne">HackerRank (Jul '20)</Link></TableCell>
+                                            <TableCell colSpan={2}><Link href="https://www.hackerrank.com/joris_dewinne" className={classes.link} underline='always'>HackerRank (Jul '20)</Link></TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
@@ -117,7 +120,7 @@ function Coding() {
                 <Grid item xs={6}>
                     <Paper elevation={3}>
                     <Typography>
-                        The list below is generated based on the source code repositories I'm working on and using <Link href="https://github.com/go-enry/go-enry">go-enry</Link> to scan all of them:
+                        The list below is generated based on the source code repositories I'm working on and using <Link href="https://github.com/go-enry/go-enry" className={classes.link} underline='always'>go-enry</Link> to scan all of them:
                     </Typography>
                     <TableContainer>
                         <Table className={classes.table} size="small">

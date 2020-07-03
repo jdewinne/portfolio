@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     card: {
         padding: theme.spacing(1),
     },
+    link: {
+        color: "inherit",
+    },
 }));
 
 function History() {
@@ -30,49 +33,49 @@ function History() {
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="https://www.stackstate.com/">StackState</Link>: Solutions Engineer | Dec 2019 - Current
+                        <Link href="https://www.stackstate.com/" className={classes.link} underline='always'>StackState</Link>: Solutions Engineer | Dec 2019 - Current
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="http://snyk.io">Snyk</Link>: Solutions Engineer | May 2019 - Dec 2019
+                        <Link href="http://snyk.io" className={classes.link} underline='always'>Snyk</Link>: Solutions Engineer | May 2019 - Dec 2019
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="http://www.xebialabs.com">XebiaLabs</Link>: Sales Engineer | 2013 - 2019
+                        <Link href="http://www.xebialabs.com" className={classes.link} underline='always'>XebiaLabs</Link>: Sales Engineer | 2013 - 2019
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="https://www.scrum.org/">Scrum.org</Link>: Professional Scrum Trainer | 2013 - 2018
+                        <Link href="https://www.scrum.org/" className={classes.link} underline='always'>Scrum.org</Link>: Professional Scrum Trainer | 2013 - 2018
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="http://www.xebia.com">Xebia</Link>: Senior Consultant | 2012 - 2013
+                        <Link href="http://www.xebia.com" className={classes.link} underline='always'>Xebia</Link>: Senior Consultant | 2012 - 2013
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="https://www.capgemini.com/">Capgemini</Link>: Manager | 2009 - 2012
+                        <Link href="https://www.capgemini.com/" className={classes.link} underline='always'>Capgemini</Link>: Manager | 2009 - 2012
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="http://www.realdolmen.com/en">RealDolmen</Link>: Technical Project Leader / Technical Analyst / Software Engineer | 2007 - 2009
+                        <Link href="http://www.realdolmen.com/en" className={classes.link} underline='always'>RealDolmen</Link>: Technical Project Leader / Technical Analyst / Software Engineer | 2007 - 2009
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="https://www.barco.com/en/">Barco</Link>: Technical Analyst / Project Lead / Software R&D Engineer | 2003 - 2006
+                        <Link href="https://www.barco.com/en/" className={classes.link} underline='always'>Barco</Link>: Technical Analyst / Project Lead / Software R&D Engineer | 2003 - 2006
                     </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -84,19 +87,19 @@ function History() {
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
-                        Professional Scrum Developer: <Link href="https://www.scrum.org/">Scrum.org</Link> | 2013
+                        Professional Scrum Developer: <Link href="https://www.scrum.org/" className={classes.link} underline='always'>Scrum.org</Link> | 2013
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
-                        Professional Scrum Master: <Link href="https://www.scrum.org/">Scrum.org</Link> | 2011
+                        Professional Scrum Master: <Link href="https://www.scrum.org/" className={classes.link} underline='always'>Scrum.org</Link> | 2011
                     </ListItemText>
                 </ListItem>
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
-                        Certified Scrum Master: <Link href="https://www.scrumalliance.org/">Scrum Alliance</Link> | 2010
+                        Certified Scrum Master: <Link href="https://www.scrumalliance.org/" className={classes.link} underline='always'>Scrum Alliance</Link> | 2010
                     </ListItemText>
                 </ListItem>
             </List>
