@@ -11,6 +11,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 
+
+import emoji from 'react-easy-emoji'
+
+
 const useStyles = makeStyles((theme) => ({
     card: {
         padding: theme.spacing(1),
@@ -19,6 +23,14 @@ const useStyles = makeStyles((theme) => ({
         color: "inherit",
     },
 }));
+
+function svgEmoji (input) {
+	return emoji(input, {
+		baseUrl: 'https://twemoji.maxcdn.com/2/svg/',
+		ext: '.svg',
+        size: '',
+	})
+}
 
 function Achievements() {
     const classes = useStyles();
@@ -33,7 +45,7 @@ function Achievements() {
                         <LanguagePython />
                     </ListItemIcon>
                     <ListItemText>
-                        Working on a nginx topology visualization using <Link href="https://github.com/nginxinc/crossplane" className={classes.link} underline='always'>crossplane</Link> and visualizing it in StackState, using an <Link href="https://github.com/jdewinne/stackstate-nginx-check" className={classes.link} underline='always'>agent check</Link>.
+                        Working on a nginx topology visualization using <Link href="https://github.com/nginxinc/crossplane" className={classes.link} underline='always'>crossplane</Link> and visualizing it in StackState, using an <Link href="https://github.com/jdewinne/stackstate-nginx-check" className={classes.link} underline='always'>agent check</Link>. { svgEmoji('✈️', "airplane", ) }
                   </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -41,7 +53,7 @@ function Achievements() {
                         <ReactIcon />
                     </ListItemIcon>
                     <ListItemText>
-                        Learning react by creating an electron app that is aiming at visualizing k8s resources (early stages). See <Link href="https://github.com/jdewinne/kuis" className={classes.link} underline='always'>kuis</Link>.
+                        Learning react by creating an electron app that is aiming at visualizing k8s resources (early stages). See <Link href="https://github.com/jdewinne/kuis" className={classes.link} underline='always'>kuis</Link>. { svgEmoji('🧽', "sponge", ) }
                   </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -49,7 +61,7 @@ function Achievements() {
                         <Docker />
                     </ListItemIcon>
                     <ListItemText>
-                        Fixed containerd cri authentication documentation. See <Link href="https://github.com/containerd/cri/pull/1375" className={classes.link} underline='always'>PR 1375</Link>.
+                        Fixed containerd cri authentication documentation. See <Link href="https://github.com/containerd/cri/pull/1375" className={classes.link} underline='always'>PR 1375</Link>. { svgEmoji('📖', "book", ) }
                   </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -57,7 +69,7 @@ function Achievements() {
                         <Linux />
                     </ListItemIcon>
                     <ListItemText>
-                        Fixed the locale settings in `alis`, an automated installer for archlinux. See <Link href="https://github.com/picodotdev/alis/pull/61" className={classes.link} underline='always'>PR 61</Link>.
+                        Fixed the locale settings in `alis`, an automated installer for archlinux. See <Link href="https://github.com/picodotdev/alis/pull/61" className={classes.link} underline='always'>PR 61</Link>. { svgEmoji('🐧', "penguin", ) }
                   </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -65,7 +77,7 @@ function Achievements() {
                         <LanguagePython />
                     </ListItemIcon>
                     <ListItemText>
-                        Helped on releasing <Link href="https://github.com/snyk-labs/pysnyk" className={classes.link} underline='always'>pysnyk</Link>, a Python client for the Snyk security platform.
+                        Helped on releasing <Link href="https://github.com/snyk-labs/pysnyk" className={classes.link} underline='always'>pysnyk</Link>, a Python client for the Snyk security platform. { svgEmoji('🔒', "locked", ) }
                   </ListItemText>
                 </ListItem>
             </List>
