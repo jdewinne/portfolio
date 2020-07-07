@@ -8,6 +8,7 @@ import History from './History';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
@@ -18,6 +19,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PhoneIcon from '@material-ui/icons/Phone';
+
+import emoji from 'react-easy-emoji'
 
 import 'fontsource-roboto';
 
@@ -38,6 +41,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function svgEmoji (input) {
+	return emoji(input, {
+		baseUrl: 'https://twemoji.maxcdn.com/2/svg/',
+		ext: '.svg',
+    size: '',
+    props: {
+      style: {height: 1.5 + 'em'}
+    }
+	})
+}
+
 
 function App() {
   const classes = useStyles();
@@ -46,6 +60,12 @@ function App() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar variant="dense">
           <Avatar alt="Joris De Winne" src="images/avatar.png" />
+          <Box component="span" m={1}>
+            { svgEmoji('🏳️‍🌈', "lgbtq", ) }
+          </Box>
+          <Box component="span" m={1}>
+            { svgEmoji('✊🏽', "blm", ) }
+          </Box>
           <Typography className={classes.root} align="right">
             <Link href="http://github.com/jdewinne" color="inherit" className={classes.link}>
               <GitHubIcon />

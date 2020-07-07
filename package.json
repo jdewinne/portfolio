@@ -12,6 +12,7 @@
     "mdi-material-ui": "^6.16.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-easy-emoji": "^1.4.0",
     "snyk": "^1.342.2"
   },
   "scripts": {
