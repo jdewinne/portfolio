@@ -10,6 +10,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -20,7 +21,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PhoneIcon from '@material-ui/icons/Phone';
 
-import emoji from 'react-easy-emoji'
+import emoji from 'react-easy-emoji';
 
 import 'fontsource-roboto';
 
@@ -38,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     background: '#333',
+  },
+  small: {
+    width: theme.spacing(2.6),
+    height: theme.spacing(2.6),
   },
 }));
 
@@ -59,12 +64,19 @@ function App() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar variant="dense">
-          <Avatar alt="Joris De Winne" src="images/avatar.png" />
+          <Box component="span" m={1}>
+            <Avatar alt="Joris De Winne" src="images/avatar.png" />
+          </Box>
+          <Divider orientation="vertical" flexItem />
+          
           <Box component="span" m={1}>
             { svgEmoji('🏳️‍🌈', "lgbtq", ) }
           </Box>
           <Box component="span" m={1}>
             { svgEmoji('✊🏽', "blm", ) }
+          </Box>
+          <Box component="span" m={1}>
+            <Avatar alt="White Helmets" src="images/WhiteHelmetsIcon.jpg" className={classes.small}/>
           </Box>
           <Typography className={classes.root} align="right">
             <Link href="http://github.com/jdewinne" color="inherit" className={classes.link}>
