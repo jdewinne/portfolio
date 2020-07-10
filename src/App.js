@@ -40,10 +40,6 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     background: '#333',
   },
-  small: {
-    width: theme.spacing(2.6),
-    height: theme.spacing(2.6),
-  },
 }));
 
 function svgEmoji (input) {
@@ -70,13 +66,19 @@ function App() {
           <Divider orientation="vertical" flexItem />
           
           <Box component="span" m={1}>
-            { svgEmoji('🏳️‍🌈', "lgbtq", ) }
+            <Link href="https://www.equalityfederation.org/" color="inherit">
+              { svgEmoji('🏳️‍🌈', "lgbtq", ) }
+            </Link>
           </Box>
           <Box component="span" m={1}>
-            { svgEmoji('✊🏽', "blm", ) }
+            <Link href="https://blacklivesmatter.com/" color="inherit">
+              { svgEmoji('✊🏽', "blm", ) }
+            </Link>
           </Box>
           <Box component="span" m={1}>
-            <Avatar alt="White Helmets" src="images/WhiteHelmetsIcon.jpg" className={classes.small}/>
+            <Link href="https://www.syriacivildefence.org/en/" color="inherit">
+              <img alt="White Helmets" src="images/WhiteHelmetsIcon.jpg" style={{height:1.5 + 'em'}} />
+            </Link>
           </Box>
           <Typography className={classes.root} align="right">
             <Link href="http://github.com/jdewinne" color="inherit" className={classes.link}>
