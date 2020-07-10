@@ -36,7 +36,7 @@ jobs:
         cmd: test
 
     - name: deploy
-      uses: actions-hub/gcloud@master
+      uses: actions-hub/gcloud@300.0.0
       env:
         PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
         APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
