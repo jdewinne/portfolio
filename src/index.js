@@ -6,6 +6,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 
+import ReactGA from 'react-ga';
+
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const darkTheme = createMuiTheme({
   palette: {
     type: 'dark',
