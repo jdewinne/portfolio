@@ -25,6 +25,8 @@ jobs:
         
     - name: yarn build
       uses: Borales/actions-yarn@v2.3.0
+      env:
+        REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID: ${{secrets.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID}}
       with:
         # Yarn command
         cmd: build
