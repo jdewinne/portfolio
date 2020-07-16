@@ -59,8 +59,8 @@ const hackerrank = [
     createHackerRankData(<LanguageJava />, 'Gold level - 5 star'),
     createHackerRankData(<LanguagePython />, 'Silver level - 4 star'),
     createHackerRankData('SQL', 'Silver level - 3 star'),
-    createHackerRankData(<ReactIcon />, 'Rank 65'),
-    createHackerRankData(<Bash />, 'Rank 5952')
+    createHackerRankData(<ReactIcon />, 'Rank 1'),
+    createHackerRankData(<Bash />, 'Rank 6015')
 ];
 
 function Coding() {
@@ -93,8 +93,8 @@ function Coding() {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
-                                        {hackerrank.map((row) => (
-                                            <TableRow key={row.language}>
+                                        {hackerrank.map((row, index) => (
+                                            <TableRow key={index}>
                                                 <TableCell>
                                                     {row.language}
                                                 </TableCell>
@@ -131,8 +131,8 @@ function Coding() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-                                    <TableRow key={row.name}>
+                                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+                                    <TableRow key={page * rowsPerPage + index}>
                                         <TableCell component="th" scope="row">
                                             {row.language}
                                         </TableCell>
