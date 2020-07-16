@@ -93,8 +93,8 @@ function Coding() {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
-                                        {hackerrank.map((row) => (
-                                            <TableRow key={row.language}>
+                                        {hackerrank.map((row, index) => (
+                                            <TableRow key={index}>
                                                 <TableCell>
                                                     {row.language}
                                                 </TableCell>
@@ -131,8 +131,8 @@ function Coding() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-                                    <TableRow key={row.name}>
+                                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+                                    <TableRow key={page * rowsPerPage + index}>
                                         <TableCell component="th" scope="row">
                                             {row.language}
                                         </TableCell>
