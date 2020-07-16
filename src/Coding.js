@@ -59,8 +59,8 @@ const hackerrank = [
     createHackerRankData(<LanguageJava />, 'Gold level - 5 star'),
     createHackerRankData(<LanguagePython />, 'Silver level - 4 star'),
     createHackerRankData('SQL', 'Silver level - 3 star'),
-    createHackerRankData(<ReactIcon />, 'Rank 65'),
-    createHackerRankData(<Bash />, 'Rank 5952')
+    createHackerRankData(<ReactIcon />, 'Rank 1'),
+    createHackerRankData(<Bash />, 'Rank 6015')
 ];
 
 function Coding() {
