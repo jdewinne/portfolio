@@ -19,6 +19,7 @@ import Typography from '@material-ui/core/Typography';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 import emoji from 'react-easy-emoji';
@@ -38,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   appBar: {
-    background: '#333',
+    color: 'inherit',
+    background: theme.palette.grey[800],
   },
 }));
 
@@ -61,7 +63,9 @@ function App() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar variant="dense">
           <Box component="span" m={1}>
-            <Avatar alt="Joris De Winne" src="images/avatar.png" />
+            <Link href="https://dewinne.dev" color="inherit">
+              <Avatar alt="Joris De Winne" src="images/avatar.png" />
+            </Link>
           </Box>
           <Divider orientation="vertical" flexItem />
           
@@ -92,6 +96,9 @@ function App() {
             </Link>
             <Link href="tel:+16266899527" color="inherit" className={classes.link}>
               <PhoneIcon />
+            </Link>
+            <Link href="pdf/Joris_De_Winne_Resume.pdf" color="inherit" className={classes.link} download target="_self">
+              <PictureAsPdfIcon />
             </Link>
           </Typography>
         </Toolbar>
