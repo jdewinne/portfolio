@@ -37,6 +37,13 @@ function createAchievement(icon, text, emoji) {
 
 let key = 0;
 const achievementRows = [
+    createAchievement(<Linux />,
+        ['Provided the solution to install  ',
+        <Link href="https://github.com/cdr/code-server" color="inherit" underline="always" key={key++}>code-server</Link>,
+        ' on archlinux using ',
+        <Link href="https://aur.archlinux.org/packages/code-server" color="inherit" underline="always" key={key++}>aur</Link>,
+        ' by fixing the "Link has been severed" problem'],
+        svgEmoji('🐧', "penguin")),
     createAchievement(<ReactIcon />,
         ['Refactored my portfolio achievements into a paginated list using ',
         <Link href="https://material-ui.com/components/tables/#custom-pagination-options" color="inherit" underline="always" key={key++}>Material-UI</Link>,
@@ -98,8 +105,8 @@ function Achievements() {
             <Typography className={classes.title} color="textSecondary" gutterBottom>
                 Latest Achievements
             </Typography>
-           <TableContainer>
-                <Table className={classes.table} size="small">
+            <TableContainer>
+                <Table size="small">
                     <TableBody>
                         {achievementRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
                             <TableRow key={page * rowsPerPage + index}>
