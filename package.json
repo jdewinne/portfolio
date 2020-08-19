@@ -9,7 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "fontsource-roboto": "^2.2.3",
-    "mdi-material-ui": "^6.16.0",
+    "mdi-material-ui": "^6.17.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-easy-emoji": "^1.4.0",
