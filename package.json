@@ -14,7 +14,7 @@
     "react-dom": "^16.13.1",
     "react-easy-emoji": "^1.4.0",
     "react-ga": "^3.1.2",
-    "snyk": "^1.370.1"
+    "snyk": "^1.387.1"
   },
   "scripts": {
     "start": "react-scripts start",
