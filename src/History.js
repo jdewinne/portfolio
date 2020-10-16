@@ -87,6 +87,12 @@ function History() {
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
+                        Python Basics: <Link href="https://coursera.org/share/9a49f54a6d84f6f5d7a2ef4aa92cacf8" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | October 2020
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                    <ListItemText>
                         Professional Scrum Developer: <Link href="https://www.scrum.org/" className={classes.link} underline='always'>Scrum.org</Link> | 2013
                     </ListItemText>
                 </ListItem>
