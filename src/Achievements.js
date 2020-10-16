@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CodeJson, Docker, Github, LanguagePython, Linux, React as ReactIcon } from 'mdi-material-ui';
+import { CodeJson, Docker, Github, LanguagePython, Linux, Nodejs, React as ReactIcon } from 'mdi-material-ui';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -37,6 +37,13 @@ function createAchievement(icon, text, emoji) {
 
 let key = 0;
 const achievementRows = [
+    createAchievement(<Nodejs />,
+        ['Open Sourced the ',
+        <Link href="https://github.com/jdewinne/slack-channel-created" color="inherit" underline="always" key={key++}>Slack Channel Created</Link>,
+        ' bot. It sends a message to a channel, each time someone creates a new Channel. Currently running on ',
+        <Link href="https://glitch.com/~slack-channel-created" color="inherit" underline="always" key={key++}>Glitch</Link>,
+        '.'],
+        svgEmoji('😺', "fomo")),
     createAchievement(<Linux />,
         ['Provided the solution to install  ',
         <Link href="https://github.com/cdr/code-server" color="inherit" underline="always" key={key++}>code-server</Link>,
