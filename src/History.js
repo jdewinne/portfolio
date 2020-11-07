@@ -87,6 +87,12 @@ function History() {
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
+                        Data Collection and Processing with Python: <Link href="https://coursera.org/share/2aac1212fb5865087d756dc4e6762c95" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | November 2020
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                    <ListItemText>
                         Python Functions, Files, and Dictionaries: <Link href="https://coursera.org/share/77c65b18b61692a1ae6734703966667c" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | October 2020
                     </ListItemText>
                 </ListItem>
