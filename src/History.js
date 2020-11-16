@@ -87,6 +87,12 @@ function History() {
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
+                        Python Classes and Inheritance: <Link href="https://coursera.org/share/b48c77ce127df1ddc26498d4ddd66300" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | November 2020
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                    <ListItemText>
                         Data Collection and Processing with Python: <Link href="https://coursera.org/share/2aac1212fb5865087d756dc4e6762c95" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | November 2020
                     </ListItemText>
                 </ListItem>
