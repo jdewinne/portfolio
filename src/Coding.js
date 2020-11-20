@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Bash, LanguageHtml5, LanguageJava, LanguageJavascript, LanguagePython, LanguageTypescript, Percent, StackOverflow, React as ReactIcon } from 'mdi-material-ui';
+import { Bash, LanguageHtml5, LanguageJava, LanguageJavascript, LanguagePython, LanguageTypescript, Percent, StackOverflow } from 'mdi-material-ui';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box'
