@@ -56,12 +56,11 @@ function createHackerRankData(language, badge) {
 }
 
 const hackerrank = [
-    createHackerRankData('Problem Solving', 'Silver Level - 4 star'),
+    createHackerRankData('Problem Solving', 'Gold Level - 5 star'),
     createHackerRankData(<LanguageJava />, 'Gold level - 5 star'),
     createHackerRankData(<LanguagePython />, 'Gold level - 5 star'),
     createHackerRankData('SQL', 'Gold level - 5 star'),
-    createHackerRankData(<ReactIcon />, 'Rank 1'),
-    createHackerRankData(<Bash />, 'Rank 6604')
+    createHackerRankData(<Bash />, 'Rank 6768')
 ];
 
 function Coding() {
@@ -90,7 +89,7 @@ function Coding() {
                                 <Table className={classes.table} size="small">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell colSpan={2}><Link href="https://www.hackerrank.com/joris_dewinne" className={classes.link} underline='always'>HackerRank (Jul '20)</Link></TableCell>
+                                            <TableCell colSpan={2}><Link href="https://www.hackerrank.com/joris_dewinne" className={classes.link} underline='always'>HackerRank (Nov '20)</Link></TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
