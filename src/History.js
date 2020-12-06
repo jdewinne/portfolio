@@ -87,6 +87,18 @@ function History() {
                 <ListItem>
                     <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                     <ListItemText>
+                        Python 3 Programming Specialization: <Link href="https://coursera.org/share/d214637c6cc512a30591ed3c26ff765f" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | December 2020
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                    <ListItemText>
+                        Python Project: pillow, tesseract, and opencv: <Link href="https://coursera.org/share/35b7174800107c051b568e6c9653d184" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | December 2020
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                    <ListItemText>
                         Python Classes and Inheritance: <Link href="https://coursera.org/share/b48c77ce127df1ddc26498d4ddd66300" className={classes.link} underline='always'>Coursera - University of Michigan</Link> | November 2020
                     </ListItemText>
                 </ListItem>
