@@ -33,7 +33,19 @@ function History() {
                 <ListItem>
                     <ListItemIcon><WorkIcon /></ListItemIcon>
                     <ListItemText>
-                        <Link href="https://www.stackstate.com/" className={classes.link} underline='always'>StackState</Link>: Solutions Engineer | Dec 2019 - Current
+                        <Link href="https://www.replicated.com/" className={classes.link} underline='always'>Replicated</Link>: Senior Software Engineer | May 2023 - Current
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><WorkIcon /></ListItemIcon>
+                    <ListItemText>
+                        <Link href="https://www.replicated.com/" className={classes.link} underline='always'>Replicated</Link>: Solutions Engineer | Mar 2021 - May 2023
+                    </ListItemText>
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon><WorkIcon /></ListItemIcon>
+                    <ListItemText>
+                        <Link href="https://www.stackstate.com/" className={classes.link} underline='always'>StackState</Link>: Solutions Engineer | Dec 2019 - Mar 2021
                     </ListItemText>
                 </ListItem>
                 <ListItem>
