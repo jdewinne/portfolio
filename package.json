@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
-    "puppeteer": "^5.2.1",
+    "puppeteer": "^23.3.0",
     "react-scripts": "^3.4.1"
   }
 }
