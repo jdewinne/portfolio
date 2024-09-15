@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CodeJson, Docker, Github, LanguagePython, Linux, Nodejs, React as ReactIcon } from 'mdi-material-ui';
+import { CodeJson, Docker, Github, LanguagePython, Linux, Kubernetes,Nodejs, React as ReactIcon } from 'mdi-material-ui';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -37,7 +37,7 @@ function createAchievement(icon, text, emoji) {
 
 let key = 0;
 const achievementRows = [
-    createAchievement(<Nodejs />,
+    createAchievement(<Kubernetes />,
         ['Added multinode support to ',
             <Link href="https://docs.replicated.com/vendor/embedded-kubernetes-overview#embedded-kubernetes-with-replicated" color="inherit" underline="always" key={key++}>Embedded Cluster</Link>,
             ' for ',
