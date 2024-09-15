@@ -38,6 +38,13 @@ function createAchievement(icon, text, emoji) {
 let key = 0;
 const achievementRows = [
     createAchievement(<Nodejs />,
+        ['Added multinode support to ',
+            <Link href="https://docs.replicated.com/vendor/embedded-kubernetes-overview#embedded-kubernetes-with-replicated" color="inherit" underline="always" key={key++}>Embedded Cluster</Link>,
+            ' for ',
+            <Link href="https://www.replicated.com/compatibility-matrix" color="inherit" underline="always" key={key++}>Compatibility Matrix</Link>,
+            '.'],
+        svgEmoji('☁️', "k8s")),
+    createAchievement(<Nodejs />,
         ['Open Sourced the ',
         <Link href="https://github.com/jdewinne/slack-channel-created" color="inherit" underline="always" key={key++}>Slack Channel Created</Link>,
         ' bot. It sends a message to a channel, each time someone creates a new Channel. Currently running on ',
