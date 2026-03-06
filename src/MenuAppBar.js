@@ -1,135 +1,97 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@mui/material/AppBar';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 
-import AppBar from '@material-ui/core/AppBar';
-import Avatar from '@material-ui/core/Avatar';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link';
-import Toolbar from '@material-ui/core/Toolbar';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import PhoneIcon from '@mui/icons-material/Phone';
 
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import EmailIcon from '@material-ui/icons/Email';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import MenuIcon from '@material-ui/icons/Menu';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import PhoneIcon from '@material-ui/icons/Phone';
-import SettingsIcon from '@material-ui/icons/Settings';
-
-import emoji from 'react-easy-emoji';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  appBar: {
-    color: 'inherit',
-    background: theme.palette.type === "dark" ? theme.palette.grey[800] : '',
-  },
-  appBarIcons: {
-    padding: theme.spacing(1)
-  },
-  drawerPaper: {
-    top: '56px',
-    height: 'auto',
-  }
-}));
-
-function svgEmoji(input) {
-  return emoji(input, {
-    baseUrl: 'https://twemoji.maxcdn.com/2/svg/',
-    ext: '.svg',
-    size: '',
-    props: {
-      style: { height: 1.5 + 'em' }
-    }
-  })
+function Sidebar() {
+  return (
+    <Box
+      sx={{
+        width: 56,
+        flexShrink: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        py: 1,
+        borderRight: 1,
+        borderColor: 'divider',
+        bgcolor: 'background.paper',
+      }}
+    >
+      <Link href="http://github.com/jdewinne" color="inherit" sx={{ p: 1, display: 'inline-flex' }} aria-label="GitHub">
+        <GitHubIcon />
+      </Link>
+      <Link href="http://www.linkedin.com/in/jorisdewinne" color="inherit" sx={{ p: 1, display: 'inline-flex' }} aria-label="LinkedIn">
+        <LinkedInIcon />
+      </Link>
+      <Divider sx={{ width: '100%', my: 0.5 }} />
+      <Link href="mailto:joris@dewinne.dev" color="inherit" sx={{ p: 1, display: 'inline-flex' }} aria-label="Email">
+        <EmailIcon />
+      </Link>
+      <Link href="tel:+16266899527" color="inherit" sx={{ p: 1, display: 'inline-flex' }} aria-label="Phone">
+        <PhoneIcon />
+      </Link>
+      <Divider sx={{ width: '100%', my: 0.5 }} />
+      <Link href="pdf/Joris_De_Winne_Resume.pdf" color="inherit" sx={{ p: 1, display: 'inline-flex' }} download target="_self" aria-label="Resume PDF">
+        <PictureAsPdfIcon />
+      </Link>
+    </Box>
+  );
 }
 
-function MenuAppBar({ theme, onToggleDark }) {
-  const classes = useStyles();
-  const [drawerLeftOpen, setDrawerLeftOpen] = React.useState(false);
-  const [drawerRightOpen, setDrawerRightOpen] = React.useState(false);
+function MenuAppBar({ theme, onToggleDark, children }) {
+  const themeIcon =
+    theme.palette.mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />;
 
-  const toggleLeftDrawer = () => {
-    setDrawerLeftOpen(!drawerLeftOpen);
-  };
-
-  const toggleRightDrawer = () => {
-    setDrawerRightOpen(!drawerRightOpen);
-  };
-
-  let themeButton = theme.palette.type === "light" ? <Brightness4Icon /> : <Brightness7Icon />;
   return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
+      <AppBar
+        position="static"
+        sx={{
+          color: 'inherit',
+          bgcolor: theme.palette.mode === 'dark' ? 'grey.800' : undefined,
+        }}
+      >
         <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleLeftDrawer}>
-            <MenuIcon />
-          </IconButton>
-          <Divider orientation="vertical" flexItem />
-          <Box component="span" m={1}>
-            <Link href="https://dewinne.dev" color="inherit">
-              <Avatar alt="Joris De Winne" src="images/avatar.png" />
-            </Link>
-          </Box>
-          <Typography className={classes.root} align="right">
-            <IconButton aria-label="settings" edge="end" color="inherit" onClick={toggleRightDrawer}>
-              <SettingsIcon />
-            </IconButton>
+          <Link href="https://dewinne.dev" color="inherit" sx={{ display: 'inline-flex' }}>
+            <Avatar alt="Joris De Winne" src="images/avatar.png" sx={{ width: 36, height: 36 }} />
+          </Link>
+          <Typography sx={{ flexGrow: 1 }} align="right">
+            <Tooltip title="Toggle light/dark theme">
+              <IconButton
+                aria-label="Toggle light/dark theme"
+                edge="end"
+                color="inherit"
+                onClick={onToggleDark}
+              >
+                {themeIcon}
+              </IconButton>
+            </Tooltip>
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={drawerLeftOpen} onClose={toggleLeftDrawer} classes={{ paper: classes.drawerPaper, }} >
-        <Link href="http://github.com/jdewinne" color="inherit" className={classes.appBarIcons}>
-          <GitHubIcon />
-        </Link>
-        <Link href="http://www.linkedin.com/in/jorisdewinne" color="inherit" className={classes.appBarIcons}>
-          <LinkedInIcon />
-        </Link>
-        <Divider />
-        <Link href="mailto:joris@dewinne.dev" color="inherit" className={classes.appBarIcons}>
-          <EmailIcon />
-        </Link>
-        <Link href="tel:+16266899527" color="inherit" className={classes.appBarIcons}>
-          <PhoneIcon />
-        </Link>
-        <Divider />
-        <Link href="pdf/Joris_De_Winne_Resume.pdf" color="inherit" className={classes.appBarIcons} download target="_self">
-          <PictureAsPdfIcon />
-        </Link>
-        <Divider />
-        <Box component="span" m={1}>
-          <Link href="https://www.equalityfederation.org/" color="inherit">
-            {svgEmoji('🏳️‍🌈', "lgbtq")}
-          </Link>
+      <Box sx={{ display: 'flex', flex: 1, minWidth: 0 }}>
+        <Sidebar />
+        <Box component="main" sx={{ flex: 1, py: 2 }}>
+          {children}
         </Box>
-        <Box component="span" m={1}>
-          <Link href="https://blacklivesmatter.com/" color="inherit">
-            {svgEmoji('✊🏽', "blm")}
-          </Link>
-        </Box>
-        <Box component="span" m={1}>
-          <Link href="https://www.syriacivildefence.org/en/" color="inherit">
-            <img alt="White Helmets" src="images/WhiteHelmetsIcon.jpg" style={{ height: 1.5 + 'em' }} />
-          </Link>
-        </Box>
-      </Drawer>
-      <Drawer anchor="right" open={drawerRightOpen} onClose={toggleRightDrawer} classes={{ paper: classes.drawerPaper, }} >
-        <Tooltip title="Toggle light/dark theme">
-          <Link color="inherit" className={classes.appBarIcons} onClick={onToggleDark}>
-            {themeButton}
-          </Link>
-        </Tooltip>
-      </Drawer>
-    </div >
+      </Box>
+    </Box>
   );
 }
 

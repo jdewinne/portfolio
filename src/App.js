@@ -6,44 +6,37 @@ import Coding from './Coding';
 import History from './History';
 import MenuAppBar from './MenuAppBar';
 
-import { makeStyles } from '@material-ui/core/styles';
-
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 import 'fontsource-roboto';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
+// Shared max width so About, Achievements, Coding, and History cards stay the same width
+const contentMaxWidth = '90%';
 
-function App({theme, onToggleDark}) {
-  const classes = useStyles();
-
+function App({ theme, onToggleDark }) {
   return (
-    <div className={classes.root}>
-      <MenuAppBar theme={theme} onToggleDark={onToggleDark} />
-      &nbsp;
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <About />
+    <MenuAppBar theme={theme} onToggleDark={onToggleDark}>
+      <Container>
+        <Box sx={{ maxWidth: contentMaxWidth, width: '100%', mx: 'auto' }}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <About />
+            </Grid>
+            <Grid item xs={12}>
+              <Achievements />
+            </Grid>
+            <Grid item xs={12}>
+              <Coding />
+            </Grid>
+            <Grid item xs={12}>
+              <History />
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <Achievements />
-          </Grid>
-          <Grid item xs={12}>
-            <Coding />
-          </Grid>
-          <Grid item xs={12}>
-            <History />
-          </Grid>
-        </Grid>
+        </Box>
       </Container>
-    </div>
+    </MenuAppBar>
   );
 }
 

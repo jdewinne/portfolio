@@ -1,33 +1,32 @@
 import React from 'react';
 import App from './App';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Portfolio() {
     const [theme, setTheme] = React.useState({
         palette: {
-            type: "dark"
-        }
+            mode: 'dark',
+        },
     });
 
     const toggleDarkTheme = () => {
-        let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
+        const newMode = theme.palette.mode === 'light' ? 'dark' : 'light';
         setTheme({
             palette: {
-                type: newPaletteType
-            }
+                mode: newMode,
+            },
         });
     };
 
-    const muiTheme = createMuiTheme(theme);
+    const muiTheme = createTheme(theme);
 
     return (
         <ThemeProvider theme={muiTheme}>
             <CssBaseline />
             <App theme={theme} onToggleDark={toggleDarkTheme} />
         </ThemeProvider>
-    )
+    );
 }
 
-export default Portfolio
+export default Portfolio;
