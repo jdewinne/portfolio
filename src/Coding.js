@@ -67,7 +67,7 @@ function Coding() {
   };
 
   return (
-    <Card sx={{ p: 1 }}>
+    <Card sx={{ p: 1, width: '100%', minWidth: 0, boxSizing: 'border-box' }}>
       <Typography color="text.secondary" gutterBottom>
         Coding
       </Typography>

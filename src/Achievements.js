@@ -147,12 +147,12 @@ function Achievements() {
   };
 
   return (
-    <Card sx={{ p: 1 }}>
+    <Card sx={{ p: 1, width: '100%', minWidth: 0, boxSizing: 'border-box' }}>
       <Typography color="text.secondary" gutterBottom>
         Latest Achievements
       </Typography>
-      <TableContainer>
-        <Table size="small">
+      <TableContainer sx={{ width: '100%' }}>
+        <Table size="small" sx={{ width: '100%' }}>
           <TableBody>
             {achievementRows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)

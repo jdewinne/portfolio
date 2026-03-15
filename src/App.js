@@ -12,25 +12,28 @@ import Grid from '@mui/material/Grid';
 
 import 'fontsource-roboto';
 
-// Shared max width so About, Achievements, Coding, and History cards stay the same width
-const contentMaxWidth = '90%';
-
 function App({ theme, onToggleDark }) {
   return (
     <MenuAppBar theme={theme} onToggleDark={onToggleDark}>
       <Container>
-        <Box sx={{ maxWidth: contentMaxWidth, width: '100%', mx: 'auto' }}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
+        <Box
+          sx={{
+            width: '100%',
+            minWidth: 0,
+            overflow: 'hidden',
+          }}
+        >
+          <Grid container spacing={3} sx={{ width: '100%', minWidth: 0 }}>
+            <Grid item xs={12} sx={{ minWidth: 0, width: '100%' }}>
               <About />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sx={{ minWidth: 0, width: '100%' }}>
               <Achievements />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sx={{ minWidth: 0, width: '100%' }}>
               <Coding />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sx={{ minWidth: 0, width: '100%' }}>
               <History />
             </Grid>
           </Grid>
